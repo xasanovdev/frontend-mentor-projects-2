@@ -1,0 +1,138 @@
+:root {
+  /* Layout */
+  --mobile-width: 375px;
+  --desktop-width: 1440px;
+
+  /* Colors - Primary */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Colors - Neutral */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  /* Typography - Body Copy */
+  --font-size-body: 15px;
+
+  /* Typography - Fonts */
+  --font-family: 'Poppins', sans-serif;
+  --font-weight-light: 200;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+}
+
+/* Add more styles as needed */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  height: auto;
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: var(--font-family);
+  padding: 3rem 2rem;
+  background-color: var(--very-light-gray);
+}
+.cards__section {
+  position: relative;
+  flex-shrink: 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  display: block;
+  overflow: hidden;
+}
+.cards__title {
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--very-dark-blue);
+}
+.cards__title span {
+  font-weight: 600;
+}
+.cards__subtitle {
+  text-align: center;
+  color: var(--grayish-blue);
+  padding-top: 12px;
+  max-width: 700px;
+  line-height: 1.5;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+  margin: auto;
+}
+.cards__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.card__content {
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 10px 20px #e5e5e5;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+
+}
+
+.card__content.cyan {
+  border-top: 6px solid var(--cyan);
+}
+.card__content.red {
+  border-top: 6px solid var(--red);
+}
+.card__content.orange {
+  border-top: 6px solid var(--orange);
+}
+.card__content.blue {
+  border-top: 6px solid var(--blue);
+}
+.card__img {
+  align-self: flex-end;
+  width: 64px;
+  height: 64px;
+}
+.card__title {
+  font-size: 22px;
+  color: var(--very-dark-blue);
+}
+.card__subtitle {
+  font-size: 16px;
+  line-height: 1.47;
+  letter-spacing: 1.2px;
+  color: var(--grayish-blue);
+}
+.cards__content-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media screen and (max-width:1150px) {
+  .cards__wrapper {
+    flex-direction: column;
+  }
+  .card__content {
+    max-width: 500px;
+  }
+}
